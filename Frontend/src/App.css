@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+  background-color: #161b22;
+  padding: 16px 32px;
+  color: #58a6ff;
+  font-size: 22px;
+  font-weight: bold;
+  border-bottom: 1px solid #30363d;
+}
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 20px;
+  flex: 1;
+}
+
+.card {
+  background-color: #161b22;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px #00000040;
+}
+
+.highlight-card {
+  border: 2px solid #58a6ff;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+input, select {
+  padding: 8px 12px;
+  margin-top: 8px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #0d1117;
+  color: white;
+  border: 1px solid #30363d;
+  width: 100%;
+}
+
+button {
+  background-color: #238636;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2ea043;
+}
+
+.multiplier {
+  font-size: 40px;
+  color: #ffa657;
+}
+
+.status {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.status-box {
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.status-success {
+  background-color: #1f6feb33;
+  color: #3fb950;
+}
+
+.status-failure {
+  background-color: #ff003333;
+  color: #f85149;
+}
