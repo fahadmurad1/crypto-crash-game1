@@ -4,8 +4,8 @@ import socket from './socket';
 import axios from 'axios';
 import BetForm from './components/BetForm';
 import WalletInfo from './components/WalletInfo';
-import GameHistory from './pages/GameHistory';
-import Navbar from './components/Navbar';
+
+
 
 function App() {
   const [playerId, setPlayerId] = useState('');
