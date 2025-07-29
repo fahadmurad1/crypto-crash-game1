@@ -12,7 +12,11 @@ dotenv.config();
 const app = express();
 const server = http.createServer(app);
 
-app.use(cors());
+app.use(cors({
+  origin: '*', // or replace with your Netlify URL
+  methods: ['GET', 'POST']
+}));
+
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 

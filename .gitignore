@@ -1,6 +1,5 @@
-dir backend /s
+
 node_modules/
-.env
 .DS_Store
 dist/
 build/

@@ -18,7 +18,8 @@
   <button onclick="cashout()">💸 Cashout</button>
 
   <script>
-    const socket = io("http://localhost:5000");
+    // ✅ Replace with your Render backend
+    const socket = io("https://crypto-crash-backend-t239.onrender.com");
 
     socket.on("connect", () => {
       document.getElementById("status").innerText = "Connected";
