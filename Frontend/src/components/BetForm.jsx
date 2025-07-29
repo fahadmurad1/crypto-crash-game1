@@ -12,7 +12,7 @@ function BetForm({ playerId }) {
     setMessage('');
 
     try {
-      const res = await axios.post('http://localhost:5000/api/place-bet', {
+      const res = await axios.post(`${process.env.REACT_APP_API_URL}/place-bet`, {
         playerId,
         usdAmount: parseFloat(usdAmount),
         currency,

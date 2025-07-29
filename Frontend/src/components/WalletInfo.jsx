@@ -12,7 +12,7 @@ function WalletInfo({ playerId }) {
     if (!playerId) return;
     const fetchWallet = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/wallet/${playerId}`);
+        const res = await axios.get(`${process.env.REACT_APP_API_URL}/wallet/${playerId}`);
         setBalances(res.data.balances);
       } catch (err) {
         console.error(err);
@@ -27,8 +27,8 @@ function WalletInfo({ playerId }) {
     const fetchPrices = async () => {
       try {
         const [btcRes, ethRes] = await Promise.all([
-          axios.get('http://localhost:5000/api/price/BTC'),
-          axios.get('http://localhost:5000/api/price/ETH')
+         axios.get(`${process.env.REACT_APP_API_URL}/price/BTC`),
+          axios.get(`${process.env.REACT_APP_API_URL}/price/ETH`)
         ]);
         setPrices({
           BTC: btcRes.data.price,
@@ -48,7 +48,7 @@ function WalletInfo({ playerId }) {
     if (!playerId) return;
     const fetchTransactions = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/transactions/${playerId}`);
+        const res = await axios.get(`${process.env.REACT_APP_API_URL}/transactions/${playerId}`);
         setTransactions(res.data);
       } catch (err) {
         console.error('Failed to fetch transactions:', err);
